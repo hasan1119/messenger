@@ -1,0 +1,198 @@
+/* common css starts*/
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI Historic";
+}
+
+.app_container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* common css ends*/
+
+/* contacts css starts */
+
+#contacts {
+  flex-basis: 350px;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.contacts_header {
+  margin-bottom: 10px;
+  padding-right: 15px;
+}
+.contacts_header .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacts_header .profile_avetar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.contacts_header .profile_avetar img {
+  width: 100%;
+}
+
+.contacts_header h4 {
+  font-family: "Segoe UI Historic";
+  font-size: 20px;
+}
+.contacts_header .create button {
+  border: none;
+  border: none;
+  background: none;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.search {
+  padding-right: 15px;
+}
+.search input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #f3f3f5;
+}
+
+.search input:focus {
+  border: none;
+  outline: none;
+}
+
+.contacts {
+  height: 80vh;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+.contacts .contact {
+  display: flex;
+
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.contacts .contact:hover {
+  background: #f3f3f5;
+}
+
+.contacts .contact .avetar {
+  height: 48px;
+  width: 48px;
+  border-radius: 50px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.contacts .contact .avetar:after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #5ad539;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #f3f3f5;
+}
+
+.contacts .contact .avetar img {
+  width: 100%;
+  border-radius: 50px;
+}
+.contacts .contact .desc .displayName {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contacts .contact .desc .last_msg {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* contacts css ends */
+
+/* inbox css starts*/
+#inbox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  height: 100vh;
+}
+.inbox_header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.inbox_header .left {
+  padding: 10px;
+  flex-basis: 40px;
+  display: flex;
+  flex: 1;
+}
+.inbox_header .avetar {
+  height: 36px;
+  width: 36px;
+  margin-right: 5px;
+}
+.inbox_header .avetar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.inbox_header .displayName {
+  font-size: 16px;
+  font-weight: bold;
+}
+.inbox_header .active_time {
+  font-size: 15px;
+  line-height: 14px;
+}
+.inbox_container {
+  flex-grow: 1;
+  width: 100%;
+}
+/* inbox css ends*/
+
+/* options css starts */
+#options {
+  height: 100vh;
+  border-left: 1px solid #ddd;
+}
+/* options css ends */
+
+#inbox {
+  .right {
+    span {
+      margin-right: 10px;
+      cursor: pointer;
+      background: #ddd;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+}
