@@ -4,7 +4,8 @@
 ::before {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -13,15 +14,22 @@ body {
 
 .app_container {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* common css ends*/
 /* contacts css starts */
 #contacts {
-  flex-basis: 350px;
+  -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
   height: 100vh;
   border-right: 1px solid #ddd;
   padding-left: 15px;
@@ -34,9 +42,15 @@ body {
 }
 
 .contacts_header .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contacts_header .profile_avetar {
@@ -90,6 +104,8 @@ body {
 }
 
 .contacts .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 8px;
   border-radius: 5px;
@@ -139,26 +155,45 @@ body {
 /* contacts css ends */
 /* inbox css starts*/
 #inbox {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   height: 100vh;
 }
 
 .inbox_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #ddd;
 }
 
 .inbox_header .left {
   padding: 10px;
-  flex-basis: 40px;
+  -ms-flex-preferred-size: 40px;
+      flex-basis: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .inbox_header .avetar {
@@ -183,8 +218,89 @@ body {
 }
 
 .inbox_container {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 100%;
+}
+
+.msg_send_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+
+.msg_send_container .send_icon_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.msg_send_container .send_icon_content div span {
+  border-radius: 50%;
+  padding: 10px;
+  color: #0679e4;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.msg_send_container .send_icon_content div span:hover {
+  background: #F2F2F2;
+}
+
+.msg_send_container .like_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 4px;
+  cursor: pointer;
+  color: #0679e4;
+}
+
+.msg_send_container .like_icon:hover {
+  background: #F2F2F2;
+}
+
+.msg_send_container .msg_content {
+  height: 40px;
+  max-width: 900px;
+  width: 100%;
+  background: #F3F3F5;
+  border-radius: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  margin-left: 15px;
+}
+
+.msg_send_container .msg_content input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  background: unset;
+  color: #000;
+  font-size: 15px;
+}
+
+.msg_send_container .msg_content inputplaceholder {
+  color: #fff;
+  font-size: 15px;
+}
+
+.msg_send_container .msg_content span {
+  width: 25px;
+  color: #0679e4;
+  font-size: 22px;
 }
 
 /* inbox css ends*/
@@ -192,6 +308,169 @@ body {
 #options {
   height: 100vh;
   border-left: 1px solid #ddd;
+}
+
+.profile_container {
+  text-align: center;
+}
+
+.profile_container .profile_img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 20px auto 10px;
+}
+
+.profile_container .profile_img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile_container h4 {
+  color: #2B2B2B;
+}
+
+.profile_container h4:hover {
+  text-decoration: underline;
+}
+
+.settings_options {
+  margin-top: 15px;
+  /* Accordion styles */
+}
+
+.settings_options input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.settings_options .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings_options .row .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.settings_options .row .col:last-child {
+  margin-left: 0.5em;
+}
+
+.settings_options .tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.settings_options .tab {
+  width: 100%;
+  overflow: hidden;
+}
+
+.settings_options .tab-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  color: #575757;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+
+.settings_options .tab-label:hover {
+  background: #F2F2F2;
+}
+
+.settings_options .tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.settings_options .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #575757;
+  background: white;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.settings_options .tab-content li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.settings_options .tab-content li span {
+  padding: 0 10px 0 0;
+}
+
+.settings_options .tab-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #F2F2F2;
+  cursor: pointer;
+}
+
+.settings_options .tab-close:hover {
+  background: #d9d9d9;
+}
+
+.settings_options input:checked + .tab-label {
+  background: #d9d9d9;
+}
+
+.settings_options input:checked + .tab-label::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.settings_options input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.settings_options input:checked ~ .tab-content li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.settings_options input:checked ~ .tab-content li span {
+  padding: 0 10px 0 0;
 }
 
 /* options css ends */

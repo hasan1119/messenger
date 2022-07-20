@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 /* common css ends*/
 
 /* contacts css starts */
@@ -33,17 +34,20 @@ body {
   margin-bottom: 10px;
   padding-right: 15px;
 }
+
 .contacts_header .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .contacts_header .profile_avetar {
   height: 36px;
   width: 36px;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .contacts_header .profile_avetar img {
   width: 100%;
 }
@@ -52,6 +56,7 @@ body {
   font-family: "Segoe UI Historic";
   font-size: 20px;
 }
+
 .contacts_header .create button {
   border: none;
   border: none;
@@ -63,6 +68,7 @@ body {
 .search {
   padding-right: 15px;
 }
+
 .search input {
   display: block;
   width: 100%;
@@ -121,11 +127,13 @@ body {
   width: 100%;
   border-radius: 50px;
 }
+
 .contacts .contact .desc .displayName {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .contacts .contact .desc .last_msg {
   font-size: 12px;
   font-weight: normal;
@@ -141,6 +149,7 @@ body {
   align-content: space-between;
   height: 100vh;
 }
+
 .inbox_header {
   display: flex;
   width: 100%;
@@ -148,17 +157,20 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
 }
+
 .inbox_header .left {
   padding: 10px;
   flex-basis: 40px;
   display: flex;
   flex: 1;
 }
+
 .inbox_header .avetar {
   height: 36px;
   width: 36px;
   margin-right: 5px;
 }
+
 .inbox_header .avetar img {
   width: 100%;
   border-radius: 50%;
@@ -168,14 +180,84 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
+
 .inbox_header .active_time {
   font-size: 15px;
   line-height: 14px;
 }
+
 .inbox_container {
   flex-grow: 1;
   width: 100%;
 }
+
+.msg_send_container {
+  display: flex;
+  padding: 0 10px;
+
+  .send_icon_content {
+    display: flex;
+
+    div span {
+      border-radius: 50%;
+      padding: 10px;
+      color: #0679e4;
+      margin: 0 4px;
+      cursor: pointer;
+
+      &:hover {
+        background: #F2F2F2;
+      }
+    }
+  }
+
+  .like_icon {
+    display: flex;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 4px;
+    cursor: pointer;
+    color: #0679e4;
+
+    &:hover {
+      background: #F2F2F2;
+    }
+  }
+
+  .msg_content {
+    height: 40px;
+    max-width: 900px;
+    width: 100%;
+    background: #F3F3F5;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-left: 15px;
+
+    input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      height: 100%;
+      background: unset;
+      color: #000;
+      font-size: 15px;
+
+      &placeholder {
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+
+    span {
+      width: 25px;
+      color: #0679e4;
+      font-size: 22px;
+    }
+  }
+}
+
 /* inbox css ends*/
 
 /* options css starts */
@@ -183,6 +265,153 @@ body {
   height: 100vh;
   border-left: 1px solid #ddd;
 }
+
+.profile_container {
+  text-align: center;
+
+  .profile_img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 20px auto 10px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  h4 {
+    color: #2B2B2B;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.settings_options {
+  margin-top: 15px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  // Layout
+  .row {
+    display: flex;
+
+
+    .col {
+      flex: 1;
+
+      &:last-child {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  /* Accordion styles */
+  .tabs {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .tab {
+    width: 100%;
+    overflow: hidden;
+
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      // background: #F2F2F2;
+      color: #575757;
+      font-weight: bold;
+      cursor: pointer;
+
+      /* Icon */
+      &:hover {
+        background: #F2F2F2;
+      }
+
+      &::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all .35s;
+      }
+    }
+
+    &-content {
+      max-height: 0;
+      padding: 0 1em;
+      color: #575757;
+      background: white;
+      transition: all .35s;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        color: #000;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px 10px;
+
+        span {
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+
+    &-close {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1em;
+      font-size: 0.75em;
+      background: #F2F2F2;
+      cursor: pointer;
+
+      &:hover {
+        background: darken(#F2F2F2, 10%);
+      }
+    }
+  }
+
+  // :checked
+  input:checked {
+    +.tab-label {
+      background: darken(#F2F2F2, 10%);
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    ~.tab-content {
+      max-height: 100vh;
+      padding: 1em;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        color: #000;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px 10px;
+
+        span {
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
 /* options css ends */
 
 #inbox {
